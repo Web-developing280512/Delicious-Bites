@@ -1,0 +1,135 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f5ebda; /* Light cream color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-image: url('cookie-image.jpg'); /* Cookie background image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: #8d6b51; /* Warm brown color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Ensuring header stays on top */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie-image {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+    transition: font-size 0.3s ease; /* Adding transition for font size */
+}
+
+.content {
+    display: grid;
+    gap: 40px; /* Increased gap between boxes */
+    padding: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.slide-in {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px; /* Reduced padding for smaller boxes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Faster, smoother transition */
+    display: block; /* Ensuring content is block-level */
+    opacity: 0; /* Start with opacity 0 for fade effect */
+    transform: translateX(-100%); /* Start with slide effect */
+    border-radius: 10px; /* Rounded corners for a classy look */
+}
+
+.slide-in.large {
+    grid-column: span 2;
+    height: auto;
+}
+
+.slide-in.medium {
+    grid-column: span 1;
+    height: auto;
+}
+
+.slide-in.small {
+    grid-column: span 1;
+    height: auto;
+}
+
+.slide-in.photo-box {
+    background: none; /* No background for photo boxes */
+    box-shadow: none; /* No shadow for photo boxes */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Match box corners */
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+button {
+    background: #8d6b51; /* Warm brown color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+button:hover {
+    background: #a98267; /* Light brown color */
+}
+
+footer {
+    background: #8d6b51; /* Warm brown color */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #f5ebda; /* Border for a clean look */
+}
+
+.footer-text {
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.image-box {
+    flex: 1 1 calc(33% - 20px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
