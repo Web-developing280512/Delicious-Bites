@@ -1,5 +1,11 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
     background: #f5ebda; /* Light cream color */
     color: #333;
     margin: 0;
